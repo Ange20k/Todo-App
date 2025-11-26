@@ -17,6 +17,10 @@ model Post {
   id        Int      @id @default(autoincrement())
   title     String
   content   String?
+  completed Boolean  @default(false) 
+  dueDate   DateTime? 
+  category  String    @default("Personnel")                 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  
 }
